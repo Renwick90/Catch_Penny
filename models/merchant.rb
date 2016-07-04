@@ -18,7 +18,7 @@ class Merchant
   end
 
   def self.all()
-    sql = "SELECT * FROM merchant"
+    sql = "SELECT * FROM merchants"
     return Merchant.map_items(sql)
   end
 

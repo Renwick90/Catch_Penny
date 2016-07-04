@@ -18,6 +18,7 @@ CREATE TABLE transactions (
  tag_id INT8 references tags(id),
  amount numeric(10,2),
  trans_date Date,
+ trans_time TIME,
  description VARCHAR(255),
  type VARCHAR(255)
 );
