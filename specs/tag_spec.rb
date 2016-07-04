@@ -7,6 +7,6 @@ class TestTag < Minitest::Test
   end
 
   def test_name
-  assert_equal("Food", @tag.name)
+  assert_equal("Food", @tag.type)
   end
 end
