@@ -1,0 +1,46 @@
+<h1>Add a Transaction!</h1>
+
+<form action="/transactions" method="post">
+  <lable for="amount">Amount:</lable>
+  <input type="number" name="amount">
+  <br>
+  <lable for="trans_date">Date:</lable>
+  <input type="date" name="trans_date">
+  <br>
+    <lable for="trans_time">Time:</lable>
+  <input type="time" name="trans_time">
+  <br>
+  <label for= "tag"> Tag:</label>
+  <select name="tag_id">
+  <% @tags.each do |tag|%>
+<option value="<%= tag.id  %>"><%=tag.type%></option>
+
+  <% end  %>
+  
+  </select>
+<br>
+    <label for= "merchant"> Merchant:</label>
+    <select name="merchant_id">
+    <% @merchants.each do |merchant|%>
+  <option value="<%= merchant.id  %>"><%=merchant.name%></option>
+
+    <% end  %>
+    
+    </select>
+<br>
+  <label for= "type"> Credit or Debit:</label>
+  <select name="type">
+ 
+    <option value="credit">Credit</option>
+    <option value="debit">Debit</option>
+
+  </select>
+  <br>
+  <lable for="description">Description:</lable>
+  <input type="text" name="description">
+  <br>
+  
+  <input type="submit" value="Add Transaction">
+
+
+</form>

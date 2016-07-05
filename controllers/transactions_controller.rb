@@ -5,17 +5,17 @@ require_relative('../models/merchant.rb')
 
 get '/transactions' do
   @transactions = Transaction.all()
-  erb :'transaction/index'
+  erb :'transactions/index'
 end
 
 get '/transactions/new' do
-  @books = Tag.all()
-  @members = Merchant.all()
+  @tags = Tag.all()
+  @merchants = Merchant.all()
   erb :'transactions/new'
 end
 
 post '/transactions' do
   @transaction = Transaction.new(params)
   @transaction.save
-  redirect to( "transactions" )
+  redirect to :'transactions/index' 
 end

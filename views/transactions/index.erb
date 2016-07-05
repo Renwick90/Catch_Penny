@@ -1,0 +1,11 @@
+<a href="/transactions/new">Add new transaction</a><br>
+
+<% @transactions.each do |transaction| %><br>
+  Description: <%= transaction.description %> <br>
+  Type: <%= transaction.type %> <br>
+  Date: <%= transaction.trans_date %> <br>
+  Time: <%= transaction.trans_time %> <br>
+  Amount: <%= transaction.amount %> <br>
+  <br>
+
+<% end %>

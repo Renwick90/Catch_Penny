@@ -1,10 +1,16 @@
 require_relative('../models/merchant.rb')
 
-get '/merchant' do
-  @merchant = Merchant.all
-  erb :'merchant/index'
+get '/merchants' do
+  @merchants = Merchant.all
+  erb :'merchants/index'
 end
 
-get '/merchant/new' do
-  erb :'merchant/new'
-end
+# get '/merchants/new' do
+#   erb :'merchants/new'
+# end
+
+# get '/pizza/:id' do
+#   # find pizza with specific id
+#   @merchant = Merchant.find(params[:id])
+#   erb ( :show )
+# end
