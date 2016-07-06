@@ -5,12 +5,14 @@ get '/merchants' do
   erb :'merchants/index'
 end
 
-# get '/merchants/new' do
-#   erb :'merchants/new'
-# end
+get '/merchants/new' do
+  erb :'merchants/new'
+end
 
-# get '/pizza/:id' do
-#   # find pizza with specific id
-#   @merchant = Merchant.find(params[:id])
-#   erb ( :show )
-# end
+post '/merchants' do
+ 
+  @merchant = Merchant.new(params)
+  @merchant.save
+  redirect to :'merchants' 
+end
+

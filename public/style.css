@@ -1,0 +1,102 @@
+
+
+html, body {
+ margin: 5px;
+ padding: 5px;
+}
+
+.nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding-left: 5px;
+ overflow: hidden;
+ background-color: ;
+ font-size: 40px;
+ font-style: 
+}
+
+.nav li {
+ float: left;
+
+}
+
+.nav li a {
+ display: block;
+ color: #85BB65;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-family: 'One Dance', sans-serif;
+ text-transform: uppercase;
+
+}
+
+.nav li a:hover {
+ background-color: #FFEEE4;
+}
+
+html {
+ background: url('http://www.hardcorecloser.com/wp-content/uploads/2016/01/raining-money.jpg');
+ background-repeat: no-repeat;
+ background-size: 100% auto;
+ background-position: center top;
+ background-attachment: fixed;
+}
+
+body:before {
+ content: "";
+ position: fixed;
+ top: -10px;
+ left: 0;
+ width: 100%;
+ height: 10px;
+
+ -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+ -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+ box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+
+ z-index: 100;
+}
+
+
+.page_tile {
+  background: rgba(255, 255, 255, 0.8);
+  border: 5px solid #074C84 ;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.new{
+  padding: 10px;
+  text-align: center;
+  font-size: 40px
+}
+
+.new a p {
+  color: black;
+}
+
+.box{
+  background: rgba(133, 187, 101, 0.8);
+  border: 5px solid #85BB65;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 40px
+
+}
+
+.home_hedder{
+
+
+}
+
+
+
+
+

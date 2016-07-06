@@ -1,0 +1,38 @@
+<h5>Total cedit:</h5>
+<p>£<%= @account.transactions_credit %></p><h5>
+
+Total debit:</h5>
+<p>£<%= @account.transactions_debit%></p><h5>
+
+Balance:</h5>
+
+<p>£<%= @account.total_balance%></p><h5>
+
+<% @account.transactions.each do |transaction|%>
+<%= transaction.trans_date %>  <%= transaction.tag_name %><%= transaction.merchant_name %><%= transaction.amount %><br>
+
+<% end %>
+
+<form method="get">
+<label for="search">Search by tag:</label>
+<select name="search">
+<option value=""></option>
+<% @tags.each do |tag|%>
+<option value="<%=tag.id%>"><%=tag.type %></option>
+<% end %>
+</select>
+<input type="hidden" name="search_type" value="tag">
+<input type="submit" value="search" >
+</form>
+
+<form method="get">
+<label for="search">Search by merchant:</label>
+<select name="search">
+<option value=""></option>
+<% @merchants.each do |merchant|%>
+<option value="<%=merchant.id%>"><%=merchant.name %></option>
+<% end %>
+</select>
+<input type="hidden" name="search_type" value="merchant">
+<input type="submit" value="search">
+</form>

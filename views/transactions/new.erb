@@ -12,6 +12,7 @@
   <br>
   <label for= "tag"> Tag:</label>
   <select name="tag_id">
+  <option value=""></option>
   <% @tags.each do |tag|%>
 <option value="<%= tag.id  %>"><%=tag.type%></option>
 
@@ -21,6 +22,7 @@
 <br>
     <label for= "merchant"> Merchant:</label>
     <select name="merchant_id">
+    <option value=""></option>
     <% @merchants.each do |merchant|%>
   <option value="<%= merchant.id  %>"><%=merchant.name%></option>
 
@@ -31,6 +33,7 @@
   <label for= "type"> Credit or Debit:</label>
   <select name="type">
  
+    <option value=""></option>
     <option value="credit">Credit</option>
     <option value="debit">Debit</option>
 

@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Project 1</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-<a href="/tags">Tags</a>
-<a href="/merchants">Merchants</a>
-<a href="/transactions">Transaction</a>
-<%= yield %>
+  <div class= "nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/transactions">Transaction</a></li>
+      <li><a href="/merchants">Merchants</a></li>
+      <li><a href="/tags">Tags</a></li>
+      <li><a href="/account">Account</a></li>
+    </ul>
+  </div>
+  <%= yield %>
 </body>
 </html>

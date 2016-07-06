@@ -1,6 +1,13 @@
+<a href>TAGS</a><br>
+<br>
 <a href="/tags/new">Add new tag</a><br>
-
+<ul>
 <% @tags.each do |tag| %>
-  Name: <%= tag.type %> 
-  <br>
-<% end %>
+<li>
+  <a href=<%="/tags/#{tag.id}"%>><%= tag.type %></a>
+  </li>
+  <% end %>
+  <ul>
+
+
+  

@@ -6,10 +6,10 @@ require_relative('../models/merchant')
 
 class TestAccount < Minitest::Test
   def setup
-    tag1 = Tag.new({'type' => 'Food'})
-    tag2 = Tag.new({'type' => 'Clothes'})
-    tag3 = Tag.new({'type' => 'Travel'})
-    tag5 = Tag.new({'type' => 'Salary'})
+    tag1 = Tag.new({'type' => 'Food', 'id'=> 1})
+    tag2 = Tag.new({'type' => 'Clothes', 'id' => 2})
+    tag3 = Tag.new({'type' => 'Travel', 'id' => 3})
+    tag5 = Tag.new({'type' => 'Salary','id' => 4})
 
  
 
@@ -35,10 +35,14 @@ class TestAccount < Minitest::Test
     assert_equal(2899, @account.total_transactions_amount )
   end
 
-  def test_account_credit
-    assert_equal(3000, @account.account_credit)
-    
+  def test_transactions_credit
+    assert_equal(3000, @account.transactions_credit)
   end
 
+def test_total_by_tag
+  @tag_id = @tag1
+  assert_equal(-30.50, @account.total_by_tag_id(1))
+  
+end
 
 end

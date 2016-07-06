@@ -1,11 +1,21 @@
-<a href="/transactions/new">Add new transaction</a><br>
+
+<div class ="new">
+  <a href="/transactions/new"><p>Add new transaction<p></a>
+</div>
+
 
 <% @transactions.each do |transaction| %><br>
+<div class ="box">
   Description: <%= transaction.description %> <br>
   Type: <%= transaction.type %> <br>
   Date: <%= transaction.trans_date %> <br>
   Time: <%= transaction.trans_time %> <br>
   Amount: <%= transaction.amount %> <br>
+  </div>
   <br>
 
 <% end %>
+
+<div class ="new">
+  <a href="/transactions/new"><p>Add new transaction<p></a>
+</div>

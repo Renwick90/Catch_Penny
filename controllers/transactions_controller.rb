@@ -17,5 +17,5 @@ end
 post '/transactions' do
   @transaction = Transaction.new(params)
   @transaction.save
-  redirect to :'transactions/index' 
+  redirect to :'transactions' 
 end

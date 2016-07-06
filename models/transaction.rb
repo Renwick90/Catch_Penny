@@ -25,8 +25,14 @@ class Transaction
       return result
   end
 
-  def self.all()
+
+
+  def self.all(query = "", query_type = "")
+    query = query.to_s
+    query_type = query_type.to_s
     sql = "SELECT * FROM transactions"
+    sql = sql + " WHERE tag_id = #{query}" if query != "" && query_type == "tag"
+    sql = sql + " WHERE merchant_id = #{query}" if query != "" && query_type == "merchant"
     return Transaction.map_items(sql)
   end
 
@@ -40,6 +46,16 @@ class Transaction
     result = transaction.map {|product| Transaction.new(product)}
     return result
   end
+
+  def merchant_name()
+      sql = "SELECT name FROM merchants WHERE id = #{@merchant_id}"
+      return Merchant.map_item(sql).name
+    end
+
+    def tag_name()
+       sql = "SELECT type FROM tags WHERE id = #{@tag_id}"
+       return Tag.map_item(sql).type
+     end
 
   def self.map_item(sql)
     result = Transaction.map_items(sql)

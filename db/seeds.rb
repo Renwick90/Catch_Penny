@@ -3,11 +3,12 @@ require( 'pry-byebug' )
 require_relative( '../models/tag' )
 require_relative( '../models/merchant' )
 require_relative( '../models/transaction' )
+require_relative( '../models/account' )
 
-
+Transaction.delete_all()
 Tag.delete_all()
 Merchant.delete_all()
-Transaction.delete_all()
+
 
 tag1 = Tag.new({'type' => 'Food'})
 tag2 = Tag.new({'type' => 'Clothes'})
@@ -37,11 +38,15 @@ transaction2 = Transaction.new({'merchant_id' => m2.id, 'tag_id' => t2.id, 'amou
 transaction3 = Transaction.new({'merchant_id' => m3.id, 'tag_id' => t3.id, 'amount' => '45.50', 'trans_date' => '2016-02-11', 'trans_time' => '18:30', 'description' => 'train to London', 'type' => 'debit'})
 transaction4 = Transaction.new({'merchant_id' => m4.id, 'tag_id' => t4.id, 'amount' => '12.50', 'trans_date' => '2016-07-04', 'trans_time' => '19:30', 'description' => 'Independance Day 2 (shite)', 'type' => 'debit'})
 transaction5 = Transaction.new({'merchant_id' => m5.id, 'tag_id' => t5.id, 'amount' => '3000', 'trans_date' => '2016-04-29', 'trans_time' => '12:00', 'description' => 'monthly pay', 'type' => 'credit'})
+transaction6 = Transaction.new({'merchant_id' => m5.id, 'tag_id' => t1.id, 'amount' => '250', 'trans_date' => '2016-04-29', 'trans_time' => '12:00', 'description' => 'monthly pay', 'type' => 'credit'})
 trans1 = transaction1.save()
 trans2 = transaction2.save()
 trans3 = transaction3.save()
 trans4 = transaction4.save()
 trans5 = transaction5.save()
+trans6 = transaction6.save()
+
+@account = Account.new(Transaction.all)
 
 binding.pry
 nil

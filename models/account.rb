@@ -13,23 +13,47 @@ class Account
     @transactions = transactions
   end
 
- def total_transactions_amount
+  def total_transactions_amount
    @transactions.reduce(0) { |sum, transaction| sum + transaction.amount }
  end
 
-  def account_credit()
-    credits = 0 
-    @transactions.each do |transaction|
-      credits += transaction.amount if transaction.type.downcase == "credit"
-    end
-    return credits
-  end
+ def total_balance
+  balance = 0
 
-  def account_debit()
-    debits = 0 
-    @accounts.each do |account|
-      debits += account.amount if account.transaction_type.downcase == "debit"
-    end
-    return debits
+  for transaction in @transactions
+
+    if transaction.type == 'credit'
+      balance += transaction.amount
+    elsif transaction.type == 'debit'
+      balance -= transaction.amount
+    end 
   end
+  return balance
+end
+
+def transactions_credit()
+  credits = 0 
+  @transactions.each do |transaction|
+    credits += transaction.amount if transaction.type.downcase == "credit"
+  end
+  return credits
+end
+
+def transactions_debit()
+  debits = 0 
+  @transactions.each do |transaction|
+    debits += transaction.amount if transaction.type.downcase == "debit"
+  end
+  return debits
+end
+
+def total_by_tag_id(tag_id)
+  total = 0
+  @transactions.each do |transaction|
+    total += transaction.amount if transaction.tag_id == tag_id
+  end
+  return total
+end
+
+
 end
