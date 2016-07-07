@@ -1,6 +1,11 @@
+<br>
+<br>
+<br>
+<br>
 <h1>Add a Transaction!</h1>
 
 <form action="/transactions" method="post">
+<div class = "new_transaction">
   <lable for="amount">Amount:</lable>
   <input type="number" name="amount">
   <br>
@@ -15,7 +20,7 @@
   <option value=""></option>
   <% @tags.each do |tag|%>
 <option value="<%= tag.id  %>"><%=tag.type%></option>
-
+</div>
   <% end  %>
   
   </select>

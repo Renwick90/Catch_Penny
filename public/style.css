@@ -5,35 +5,53 @@ html, body {
  padding: 5px;
 }
 
+footer{
+  background-color:#85BB65 ;
+  height: 50px;
+  text-align: right;
+  position: fixed;
+  right: 5px;
+  bottom: 0px;
+  width: 100%;
+  font-size: 15px;
+  font-family: Comic Sans, Comic Sans MS, cursive
+  }
+
+.nav{
+  position: fixed;
+  width: 100%;
+}
+
 .nav ul {
  list-style-type: none;
  margin: 0;
- padding-left: 5px;
+ padding-left: 0px;
  overflow: hidden;
- background-color: ;
- font-size: 40px;
- font-style: 
+ background-color: #85BB65;
+ font-size: 20px;
+ font-family: Comic Sans, Comic Sans MS, cursive
 }
 
 .nav li {
- float: left;
+ float: right;
 
 }
 
 .nav li a {
  display: block;
- color: #85BB65;
+ color: black;
  text-align: center;
  padding: 14px 16px;
  text-decoration: none;
- font-family: 'One Dance', sans-serif;
+ font-family: Comic Sans, Comic Sans MS, cursive;
  text-transform: uppercase;
 
 }
 
 .nav li a:hover {
- background-color: #FFEEE4;
+ background-color: #D6F9E8;
 }
+
 
 html {
  background: url('http://www.hardcorecloser.com/wp-content/uploads/2016/01/raining-money.jpg');
@@ -41,6 +59,9 @@ html {
  background-size: 100% auto;
  background-position: center top;
  background-attachment: fixed;
+ font-weight: 200;
+ font-family: Comic Sans, Comic Sans MS, cursive;
+ color: black;
 }
 
 body:before {
@@ -87,16 +108,78 @@ body:before {
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  font-size: 40px
+  font-size: 40px;
+  width: 40%;
 
 }
 
 .home_hedder{
-
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: Comic Sans, Comic Sans MS, cursive
 
 }
 
+.home_text{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Comic Sans, Comic Sans MS, cursive
 
+}
 
+.merchant_name{
+  color: black;
+  font-size: 40px;
+  font-weight: 200;
+  font-family: Comic Sans, Comic Sans MS, cursive
+
+}
+
+.merchant_title{
+  
+  color: Black;
+  font-size: 40px;
+  font-weight: 200;
+  font-family: Comic Sans, Comic Sans MS, cursive
+
+}
+
+.merchant_new{
+  color: black;
+  font-size: 40px;
+  font-weight: 200;
+  font-family: Comic Sans, Comic Sans MS, cursive
+
+}
+
+.new_transaction{
+  background: rgba(133, 187, 101, 0.8);
+  border: 5px solid #85BB65;
+  padding: 20px;
+  margin: 20px;
+  
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 20px;
+  width: 40%;
+
+}
+
+.Tag{
+color: black;
+font-size: 40px;
+font-weight: 200;
+font-family: Comic Sans, Comic Sans MS, cursive
+}
+
+.account{
+  color: black;
+  font-size: 30px;
+  font-weight: 200;
+  font-family: Comic Sans, Comic Sans MS, cursive
+
+}
 
 

@@ -23,7 +23,7 @@ t5 = tag5.save()
 
 
 merchant1 = Merchant.new({'name' => 'Tesco'})
-merchant2 = Merchant.new({'name' => 'TK Max'})
+merchant2 = Merchant.new({'name' => 'TK Maxx'})
 merchant3 = Merchant.new({'name' => 'Virgin'})
 merchant4 = Merchant.new({'name' => 'Vue Cinema'})
 merchant5 = Merchant.new({'name' => 'HALO'})

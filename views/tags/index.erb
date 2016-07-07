@@ -1,13 +1,22 @@
-<a href>TAGS</a><br>
+<div class = "Tag">
 <br>
-<a href="/tags/new">Add new tag</a><br>
-<ul>
+<h4>TAGS</h4><br>
+<a href="/tags/new">Add new tag</a>
+<br>
+
 <% @tags.each do |tag| %>
-<li>
-  <a href=<%="/tags/#{tag.id}"%>><%= tag.type %></a>
-  </li>
+
+  <p><%= tag.type %></p>
+
+
   <% end %>
-  <ul>
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+  
 
 
   

@@ -1,11 +1,23 @@
-<a href>MERCHANTS</a><br>
 <br>
-<a href="/merchants/new">Add new merchant</a><br>
-
+<br>
+<br>
+<div class = "merchant_title">
+  
+<p href>MERCHANTS</p><br>
+<br>
+<a href="/merchants/new">Add new merchant</a>
+</div>
 <% @merchants.each do |merchant| %>
-  Name: <%= merchant.name %> 
+<div class = "merchant_name">
+<p>
+<%= merchant.name %> 
+</p>
+</div>
   <br>
 <% end %>
+<a href="/merchants/new">Add new merchant</a>
+<a href="/merchants/new">Add new merchant</a>
+<br>
 
 
 

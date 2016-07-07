@@ -27,6 +27,11 @@ class Merchant
     run(sql)
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM merchants WHERE id = #{id}"
+    runl(sql)
+  end
+
   def self.map_items(sql)
     merchant = run(sql)
     result = merchant.map {|product| Merchant.new(product)}

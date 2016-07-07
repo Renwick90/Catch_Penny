@@ -12,9 +12,9 @@ class Tag
 
   def save()
     sql = "INSERT INTO tags (type) VALUES ('#{@type}') RETURNING *"
-      tag = run(sql).first
-      result = Tag.new( tag )
-      return result
+    tag = run(sql).first
+    result = Tag.new( tag )
+    return result
   end
 
   def self.all()
@@ -25,6 +25,20 @@ class Tag
   def self.delete_all()
     sql = "DELETE FROM tags"
     run(sql)
+  end
+
+
+  def self.find(id)
+    sql = "SELECT * FROM tags WHERE id= #{id}"
+    tag = run(sql)
+    result = Tag.new(tag.first)
+    return result
+  end
+
+
+  def self.delete(id)
+    sql = "DELETE FROM tags WHERE id = #{id}"
+    runl(sql)
   end
 
   def self.map_items(sql)

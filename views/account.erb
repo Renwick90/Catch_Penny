@@ -1,3 +1,7 @@
+<br>
+<br>
+<br>
+<div class="account">
 <h5>Total cedit:</h5>
 <p>£<%= @account.transactions_credit %></p><h5>
 
@@ -9,7 +13,8 @@ Balance:</h5>
 <p>£<%= @account.total_balance%></p><h5>
 
 <% @account.transactions.each do |transaction|%>
-<%= transaction.trans_date %>  <%= transaction.tag_name %><%= transaction.merchant_name %><%= transaction.amount %><br>
+<%= transaction.trans_date %><br>  <%= transaction.tag_name %><br><%= transaction.merchant_name %><br><%= transaction.amount %><br>
+<br>
 
 <% end %>
 
@@ -36,3 +41,4 @@ Balance:</h5>
 <input type="hidden" name="search_type" value="merchant">
 <input type="submit" value="search">
 </form>
+</div>>

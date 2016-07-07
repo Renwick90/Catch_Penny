@@ -55,5 +55,13 @@ def total_by_tag_id(tag_id)
   return total
 end
 
+# def percentage_saving 
+#   balance = transactions.total_balance
+#   credits = transactions.transactions_credit
+
+#   (credits/100 )*
+  
+
+# end 
 
 end
